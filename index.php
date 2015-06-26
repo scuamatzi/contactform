@@ -43,7 +43,7 @@
 	body {
 	    background-color: #C6F5F2;
 	}
-	#content { background-color:#C6F5F2; width:950px; min-height:550px; text-align:left; padding:20px;  }
+	#content { background-color:#C6F5F2; width:550px; min-height:550px; text-align:left; padding:20px;  }
 	h1 {
 	    padding:20px 10px 20px 10px;
 	}
@@ -54,6 +54,12 @@
 	    background-color: #CA410B !important;
 	}
 	.italic { font-style:italic }
+	.emailSent{ 
+		display: inline-block;
+		margin: 5px 0 5px 25px;
+		color: #007500;
+		font-size: 1.3em;
+	}
 	.fieldrequired { color:red; }
 	.large { font-size:22px; }
 	.orange { color:orange; }
@@ -138,14 +144,16 @@
 </head>
 <body>
 	<div id="page-wrap">
-<?php 
-	if (!empty($emailSent)) {
-		echo "Email sent successfully";
-	}
-?>	
 
 		<div id="content">
 
+			<?php 
+				if (!empty($emailSent)) {
+					?>
+					<span class="emailSent"> Email sent successfully. </span>
+				<?php
+				}
+			?>	
 			
 			<!-- HTML form for validation demo -->
 			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="register-form" novalidate="novalidate">
