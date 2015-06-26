@@ -72,14 +72,19 @@
 	#register-form .fieldgroup label {
 	    float: left;
 	    padding: 15px 0 0;
-	    text-align: right;
+	    text-align: left;
 	    width: 110px;
 	}
 
-	#register-form .fieldgroup input, #register-form .fieldgroup textarea, #register-form .fieldgroup select {
+	#register-form .fieldgroup input, #register-form .fieldgroup select {
 	    float: right;
 	    margin: 10px 0;
 	    height: 25px;
+	}
+
+	#register-form .fieldgroup textarea{
+		float: right;
+		margin: 10px 0;
 	}
 
 	#register-form .submit {
@@ -135,7 +140,32 @@
 						</div>
 
 						<div class="fieldgroup">
-							<input type="submit" value="Register" class="submit">
+							<label for="address">Address <span class="fieldrequired" >*</span></label>
+							<input type="text" name="address">
+						</div>
+
+						<div class="fieldgroup">
+							<label for="city">City <span class="fieldrequired" >*</span></label>
+							<input type="text" name="city">
+						</div>
+
+						<div class="fieldgroup">
+							<label for="state">State <span class="fieldrequired" >*</span></label>
+							<input type="text" name="state">
+						</div>
+
+						<div class="fieldgroup">
+							<label for="country">Country <span class="fieldrequired" >*</span></label>
+							<input type="text" name="country">
+						</div>
+
+						<div class="fieldgroup">
+							<label for="message">Message <span class="fieldrequired" >*</span></label>
+							<textarea name="message" id="" cols="19" rows="9"></textarea>
+						</div>
+
+						<div class="fieldgroup">
+							<input type="submit" value="Submit" class="submit">
 						</div>
 
 					</fieldset>
@@ -172,13 +202,23 @@
                         email: true
                     },
                     phone: "required",
+                    address: "required",
+                    city: "required",
+                    state: "required",
+                    country: "required",
+                    message: "required",
                                         
                 },
                 messages: {
                     name: "Please enter your name",
                     company: "Please the name of your company",
                     email: "Please enter a valid email address",
-                    phone: "Please enter you phone number",
+                    phone: "Please enter your phone number",
+                    address: "Please enter your address",
+                    city: "Please enter your city",
+                    state: "Please enter your state",
+                    country: "Please enter your country",
+                    message: "Please enter your message",
                     
                 },
                 submitHandler: function(form) {
