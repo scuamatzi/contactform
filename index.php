@@ -21,11 +21,12 @@
 	#header {
 	    background-color: #CA410B !important;
 	}
+	.italic { font-style:italic }
+	.fieldrequired { color:red; }
 	.large { font-size:22px; }
 	.orange { color:orange; }
-	.italic { font-style:italic }
-	.textmiddle {vertical-align:middle;}
 	.padout { padding-left:25px; padding-right:25px; }
+	.textmiddle {vertical-align:middle;}
 	.rounded-corners {
 	     -moz-border-radius: 40px;
 	    -webkit-border-radius: 40px;
@@ -90,10 +91,11 @@
 	#register-form .fieldgroup label.error {
 	    color: #FB3A3A;
 	    display: inline-block;
-	    margin: 4px 0 5px 125px;
+	    font-size: .9em;
+	    margin: 4px 0 5px 93px;
 	    padding: 0;
-	    text-align: left;
-	    width: 220px;
+	    text-align: right;
+	    width: 225px;
 	}
 	</style>
 </head>
@@ -113,23 +115,23 @@
 					<fieldset>
 
 						<div class="fieldgroup">
-							<label for="firstname">First Name</label>
-							<input type="text" name="firstname">
+							<label for="name">Name <span class="fieldrequired" >*</span></label>
+							<input type="text" name="name">
 						</div>
 
 						<div class="fieldgroup">
-							<label for="lastname">Last Name</label>
-							<input type="text" name="lastname">
+							<label for="company">Company <span class="fieldrequired" >*</span></label>
+							<input type="text" name="company">
 						</div>
 
 						<div class="fieldgroup">
-							<label for="email">Email</label>
+							<label for="email">Email <span class="fieldrequired" >*</span></label>
 							<input type="text" name="email">
 						</div>
 
 						<div class="fieldgroup">
-							<label for="password">Password</label>
-							<input type="password" name="password">
+							<label for="phone">Phone number <span class="fieldrequired" >*</span></label>
+							<input type="text" name="phone">
 						</div>
 
 						<div class="fieldgroup">
@@ -163,26 +165,20 @@
             //form validation rules
             $("#register-form").validate({
                 rules: {
-                    firstname: "required",
-                    lastname: "required",
+                    name: "required",
+                    company: "required",
                     email: {
                         required: true,
                         email: true
                     },
-                    password: {
-                        required: true,
-                        minlength: 5
-                    },
-                    
+                    phone: "required",
+                                        
                 },
                 messages: {
-                    firstname: "Please enter your firstname",
-                    lastname: "Please enter your lastname",
-                    password: {
-                        required: "Please provide a password",
-                        minlength: "Your password must be at least 5 characters long"
-                    },
+                    name: "Please enter your name",
+                    company: "Please the name of your company",
                     email: "Please enter a valid email address",
+                    phone: "Please enter you phone number",
                     
                 },
                 submitHandler: function(form) {
