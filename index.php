@@ -1,24 +1,24 @@
 <?php 
 	$emailTo="email_address";
 	if ($_SERVER['REQUEST_METHOD']=='POST') {
-		$name 		=stripslashes(trim($_POST['name']));
-		$company 	=stripslashes(trim($_POST['company']));
+		$nombre 		=stripslashes(trim($_POST['nombre']));
+		$empresa 	=stripslashes(trim($_POST['empresa']));
 		$email 		=stripslashes(trim($_POST['email']));
-		$phone 		=stripslashes(trim($_POST['phone']));
-		$address	=stripslashes(trim($_POST['address']));
-		$city 		=stripslashes(trim($_POST['city']));
-		$state 		=stripslashes(trim($_POST['state']));
-		$country 	=stripslashes(trim($_POST['country']));
-		$message 	=stripslashes(trim($_POST['message']));
-		$subject	="Email sent from tecmov.com";
+		$telefono 	=stripslashes(trim($_POST['telefono']));
+		$direccion	=stripslashes(trim($_POST['direccion']));
+		$ciudad		=stripslashes(trim($_POST['ciudad']));
+		$estado		=stripslashes(trim($_POST['estado']));
+		$pais 	=stripslashes(trim($_POST['pais']));
+		$mensaje 	=stripslashes(trim($_POST['mensaje']));
+		$subject	="Mensaje enviado de tecmov.com";
 
 		$emailIsValid = preg_match('/^[^0-9][A-z0-9._%+-]+([.][A-z0-9_]+)*[@][A-z0-9_]+([.][A-z0-9_]+)*[.][A-z]{2,4}$/', $email);
 
-		if($name && $email && $emailIsValid && $subject && $message){
-			$body = "Name: $name <br /> Company: $company <br /> Email: $email <br /> Phone number: $phone <br /> Address: $address <br /> City: $city <br /> State: $state <br /> Country: $country <br /> Message: $message";
+		if($nombre && $email && $emailIsValid && $subject && $mensaje){
+			$body = "Nombre: $nombre <br /> Empresa: $empresa <br /> Email: $email <br /> Telefono: $telefono <br /> Direccion: $direccion <br /> Ciudad: $ciudad <br /> Estado: $estado <br /> Pais: $pais <br /> mensaje: $mensaje";
 			$headers  = 'MIME-Version: 1.1' . PHP_EOL;
 			$headers .= 'Content-type: text/html; charset=utf-8' . PHP_EOL;
-			$headers .= "From: $name <$email>" . PHP_EOL;
+			$headers .= "From: $nombre <$email>" . PHP_EOL;
 			$headers .= "Return-Path: $emailTo" . PHP_EOL;
 			$headers .= "Reply-To: $email" . PHP_EOL;
 			$headers .= "X-Mailer: PHP/". phpversion() . PHP_EOL;
@@ -150,7 +150,7 @@
 			<?php 
 				if (!empty($emailSent)) {
 					?>
-					<span class="emailSent"> Email sent successfully. </span>
+					<span class="emailSent"> Mensaje enviado! </span>
 				<?php
 				}
 			?>	
@@ -164,13 +164,13 @@
 					<fieldset>
 
 						<div class="fieldgroup">
-							<label for="name">Name <span class="fieldrequired" >*</span></label>
-							<input type="text" name="name">
+							<label for="nombre">Nombre <span class="fieldrequired" >*</span></label>
+							<input type="text" name="nombre">
 						</div>
 
 						<div class="fieldgroup">
-							<label for="company">Company <span class="fieldrequired" >*</span></label>
-							<input type="text" name="company">
+							<label for="empresa">Empresa <span class="fieldrequired" >*</span></label>
+							<input type="text" name="empresa">
 						</div>
 
 						<div class="fieldgroup">
@@ -179,33 +179,33 @@
 						</div>
 
 						<div class="fieldgroup">
-							<label for="phone">Phone number <span class="fieldrequired" >*</span></label>
-							<input type="text" name="phone">
+							<label for="telefono">Teléfono <span class="fieldrequired" >*</span></label>
+							<input type="text" name="telefono">
 						</div>
 
 						<div class="fieldgroup">
-							<label for="address">Address <span class="fieldrequired" >*</span></label>
-							<input type="text" name="address">
+							<label for="direccion">Direccion <span class="fieldrequired" >*</span></label>
+							<input type="text" name="direccion">
 						</div>
 
 						<div class="fieldgroup">
-							<label for="city">City <span class="fieldrequired" >*</span></label>
-							<input type="text" name="city">
+							<label for="ciudad">Ciudad <span class="fieldrequired" >*</span></label>
+							<input type="text" name="ciudad">
 						</div>
 
 						<div class="fieldgroup">
-							<label for="state">State <span class="fieldrequired" >*</span></label>
-							<input type="text" name="state">
+							<label for="estado">Estado <span class="fieldrequired" >*</span></label>
+							<input type="text" name="estado">
 						</div>
 
 						<div class="fieldgroup">
-							<label for="country">Country <span class="fieldrequired" >*</span></label>
-							<input type="text" name="country">
+							<label for="pais">Pais <span class="fieldrequired" >*</span></label>
+							<input type="text" name="pais">
 						</div>
 
 						<div class="fieldgroup">
-							<label for="message">Message <span class="fieldrequired" >*</span></label>
-							<textarea name="message" id="" cols="19" rows="9"></textarea>
+							<label for="mensaje">mensaje <span class="fieldrequired" >*</span></label>
+							<textarea name="mensaje" id="" cols="19" rows="9"></textarea>
 						</div>
 
 						<div class="fieldgroup">
@@ -239,30 +239,30 @@
             //form validation rules
             $("#register-form").validate({
                 rules: {
-                    name: "required",
-                    company: "required",
+                    nombre: "required",
+                    empresa: "required",
                     email: {
                         required: true,
                         email: true
                     },
-                    phone: "required",
-                    address: "required",
-                    city: "required",
-                    state: "required",
-                    country: "required",
-                    message: "required",
+                    telefono: "required",
+                    direccion: "required",
+                    ciudad: "required",
+                    estado: "required",
+                    pais: "required",
+                    mensaje: "required",
                                         
                 },
                 messages: {
-                    name: "Please enter your name",
-                    company: "Please the name of your company",
-                    email: "Please enter a valid email address",
-                    phone: "Please enter your phone number",
-                    address: "Please enter your address",
-                    city: "Please enter your city",
-                    state: "Please enter your state",
-                    country: "Please enter your country",
-                    message: "Please enter your message",
+                    nombre: "Por favor ingrese su nombre",
+                    empresa: "Por favor indique su empresa",
+                    email: "Por favor ingrese un email válido",
+                    telefono: "Por favor ingrese su teléfono",
+                    direccion: "Por favor ingrese su direccion",
+                    ciudad: "Por favor ingrese su ciudad",
+                    estado: "Por favor ingrese su estado",
+                    pais: "Por favor ingrese su pais",
+                    mensaje: "Por favor ingrese su mensaje",
                     
                 },
                 submitHandler: function(form) {
