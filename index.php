@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Contact Form</title>
-	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script type="text/javascript" src="jquery.validate.min.js"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 	<style>
 body {
     background-color: #C6F5F2;
@@ -102,70 +102,70 @@ h2 {
 	<div id="page-wrap">
 
 
-<div id="header">
-<a href="http://www.jquery4u.com/"><img src="http://www.jquery4u.com/wp-content/uploads/2011/07/new-jquery-logo3.png" id="logo-image"></a>
-</div>
+		<div id="header">
+			<a href="http://www.jquery4u.com/"><img src="http://www.jquery4u.com/wp-content/uploads/2011/07/new-jquery-logo3.png" id="logo-image"></a>
+		</div>
 
-<div id="content">
+		<div id="content">
 
-<h1>Basic jQuery Validation Form Demo</h1>
+			<h1>Basic jQuery Validation Form Demo</h1>
 
-<!-- HTML form for validation demo -->
-<form action="" method="post" id="register-form" novalidate="novalidate">
+			<!-- HTML form for validation demo -->
+			<form action="" method="post" id="register-form" novalidate="novalidate">
 
-    <h2>User Registration</h2>
+				<h2>User Registration</h2>
 
-    <div id="form-content">
-        <fieldset>
+				<div id="form-content">
+					<fieldset>
 
-            <div class="fieldgroup">
-                <label for="firstname">First Name</label>
-                <input type="text" name="firstname">
-            </div>
+						<div class="fieldgroup">
+							<label for="firstname">First Name</label>
+							<input type="text" name="firstname">
+						</div>
 
-            <div class="fieldgroup">
-                <label for="lastname">Last Name</label>
-                <input type="text" name="lastname">
-            </div>
+						<div class="fieldgroup">
+							<label for="lastname">Last Name</label>
+							<input type="text" name="lastname">
+						</div>
 
-            <div class="fieldgroup">
-                <label for="email">Email</label>
-                <input type="text" name="email">
-            </div>
+						<div class="fieldgroup">
+							<label for="email">Email</label>
+							<input type="text" name="email">
+						</div>
 
-            <div class="fieldgroup">
-                <label for="password">Password</label>
-                <input type="password" name="password">
-            </div>
+						<div class="fieldgroup">
+							<label for="password">Password</label>
+							<input type="password" name="password">
+						</div>
 
-            <div class="fieldgroup">
-                <p class="right">By clicking register you agree to our <a target="_blank" href="/policy">policy</a>.</p>
-                <input type="submit" value="Register" class="submit">
-            </div>
+						<div class="fieldgroup">
+							<p class="right">By clicking register you agree to our <a target="_blank" href="/policy">policy</a>.</p>
+							<input type="submit" value="Register" class="submit">
+						</div>
 
-        </fieldset>
-    </div>
+					</fieldset>
+				</div>
 
-        <div class="fieldgroup">
-            <p>Already registered? <a href="/login">Sign in</a>.</p>
-        </div>
-</form>
-<!-- END HTML form for validation -->
+				<div class="fieldgroup">
+					<p>Already registered? <a href="/login">Sign in</a>.</p>
+				</div>
+			</form>
+			<!-- END HTML form for validation -->
 
 
-<p>
-<a href="http://www.jquery4u.com/forms/basic-jquery-form-validation-tutorial/"><img src="http://www.jquery4u.com/demos/images/btn-tutorial-1.jpg" alt="tutorial" /></a>
-<a href="http://www.jquery4u.com/demos/basic-jquery-validation-form/basic-jquery-validation-form-demo.zip"><img src="http://www.jquery4u.com/demos/images/btn-download-1.jpg" alt="download" /></a>
-</p>
+			<p>
+				<a href="http://www.jquery4u.com/forms/basic-jquery-form-validation-tutorial/"><img src="http://www.jquery4u.com/demos/images/btn-tutorial-1.jpg" alt="tutorial" /></a>
+				<a href="http://www.jquery4u.com/demos/basic-jquery-validation-form/basic-jquery-validation-form-demo.zip"><img src="http://www.jquery4u.com/demos/images/btn-download-1.jpg" alt="download" /></a>
+			</p>
 
-</div>
+		</div>
 
-</div>
+	</div>
 
 </div> <!-- end page wrap -->
 
 <footer>
-    <p>&copy; Copyright 2012 jQuery4u. All rights reserved.</p>
+	<p>&copy; Copyright 2012 jQuery4u. All rights reserved.</p>
 </footer>
 
 
