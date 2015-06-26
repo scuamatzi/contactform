@@ -58,7 +58,7 @@
 	    margin-left: 20px;
 	    margin-top: 10px;
 	    padding: 25px 50px 10px;
-	    width: 350px;
+	    width: 440px;
 	}
 
 	#register-form .fieldgroup {
@@ -103,8 +103,7 @@
 
 		<div id="content">
 
-			<h1>Basic jQuery Validation Form Demo</h1>
-
+			
 			<!-- HTML form for validation demo -->
 			<form action="" method="post" id="register-form" novalidate="novalidate">
 
