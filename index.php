@@ -1,5 +1,5 @@
 <?php 
-	$emailTo="escuamatzi@gmail.com";
+	$emailTo="email_address";
 	if ($_SERVER['REQUEST_METHOD']=='POST') {
 		$name 		=stripslashes(trim($_POST['name']));
 		$company 	=stripslashes(trim($_POST['company']));
@@ -15,7 +15,7 @@
 		$emailIsValid = preg_match('/^[^0-9][A-z0-9._%+-]+([.][A-z0-9_]+)*[@][A-z0-9_]+([.][A-z0-9_]+)*[.][A-z]{2,4}$/', $email);
 
 		if($name && $email && $emailIsValid && $subject && $message){
-			$body = "Name: $name <br /> Email: $email <br /> Message: $message";
+			$body = "Name: $name <br /> Company: $company <br /> Email: $email <br /> Phone number: $phone <br /> Address: $address <br /> City: $city <br /> State: $state <br /> Country: $country <br /> Message: $message";
 			$headers  = 'MIME-Version: 1.1' . PHP_EOL;
 			$headers .= 'Content-type: text/html; charset=utf-8' . PHP_EOL;
 			$headers .= "From: $name <$email>" . PHP_EOL;
@@ -41,9 +41,9 @@
 	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 	<style>
 	body {
-	    background-color: #C6F5F2;
+	    background-color: #f7f7f7;
 	}
-	#content { background-color:#C6F5F2; width:550px; min-height:550px; text-align:left; padding:20px;  }
+	#content { background-color:#f7f7f7; width:550px; min-height:550px; text-align:left; padding:20px; padding-top: 0;  }
 	h1 {
 	    padding:20px 10px 20px 10px;
 	}
@@ -95,7 +95,7 @@
 	    display: inline-block;
 	    margin-bottom: 30px;
 	    margin-left: 20px;
-	    margin-top: 10px;
+	    margin-top: 0px;
 	    padding: 25px 50px 10px;
 	    width: 440px;
 	}
